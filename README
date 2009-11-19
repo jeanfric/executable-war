@@ -9,9 +9,8 @@ To achieve this goal, we provide a sample Maven recipe that a developer
 can use, and a launcher class that will take care of making direct
 execution of the WAR possible.
 
-To find out more, please see the Javadoc pages for more information 
-on how to use.  You can also find out more about this project at
-http://jean-francois.richard.name/.
+To find out more, please see the Javadoc pages.  You can also read about 
+this project at http://jean-francois.richard.name/.
 
 
 References
