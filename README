@@ -12,6 +12,12 @@ execution of the WAR possible.
 To find out more, please see the Javadoc pages.  You can also read about 
 this project at http://jean-francois.richard.name/.
 
+Sample Application Code
+-----------------------
+
+You can find a sample application that uses executable-war at 
+http://github.com/jfrichard/executable-war-sample-application.
+
 
 References
 ----------
