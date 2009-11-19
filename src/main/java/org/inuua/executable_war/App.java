@@ -111,10 +111,10 @@ public final class App {
         // dependency list slim as it would require carrying the dependencies in
         // the war and unpacking them together with Winstone.
 
-        InputStream in = jar.openStream();
+        final InputStream in = jar.openStream();
         try {
 
-            OutputStream out = new FileOutputStream(tmpJar);
+            final OutputStream out = new FileOutputStream(tmpJar);
             try {
 
                 final byte[] buf = new byte[DEFAULT_BUFFER_SIZE];
@@ -180,7 +180,7 @@ public final class App {
         } else {
             winstoneJarFileName = winstoneJarFileName.trim();
             if ("".equals(winstoneJarFileName) || !winstoneJarFileName.endsWith(".jar")) {
-                throw new InvalidAttributeValueException("The Winstone jar name was an empty string.  It needs to contain an entry such as 'winstone-lite-0.9.jar'.");
+                throw new InvalidAttributeValueException("The Winstone jar name was an empty string or did not look like a JAR file.  It needs to contain an entry such as 'winstone-lite-0.9.jar'.");
             }
         }
         final URL originalWinstoneJarLocation = App.class.getResource(WEB_INF_LIB_FOLDER + winstoneJarFileName);
@@ -209,16 +209,16 @@ public final class App {
             throws SecurityException, NoSuchMethodException, ClassNotFoundException, MalformedURLException {
 
         // Get the Winstone Main Class
-        ClassLoader winstoneJarClassLoader = new URLClassLoader(new URL[]{tmpWinstoneJar.toURI().toURL()});
-        Class launcher = winstoneJarClassLoader.loadClass("winstone.Launcher");
-        Method mainMethod = launcher.getMethod("main", new Class[]{String[].class});
+        final ClassLoader winstoneJarClassLoader = new URLClassLoader(new URL[]{tmpWinstoneJar.toURI().toURL()});
+        final Class launcher = winstoneJarClassLoader.loadClass("winstone.Launcher");
+        final Method mainMethod = launcher.getMethod("main", new Class[]{String[].class});
         return mainMethod;
     }
 
     private static List<String> setupWinstoneArguments(final String[] args)
             throws IOException, URISyntaxException {
 
-        List<String> arguments = new ArrayList<String>(Arrays.asList(args));
+        final List<String> arguments = new ArrayList<String>(Arrays.asList(args));
         arguments.add(0, "--warfile=" + myOwnFileName.getAbsolutePath());
         arguments.add("--webroot=" + getSaneWebRoot());
         String params = myOwnManifest.getValue(WINSTONE_JAR_MANIFEST_PARAMS);
