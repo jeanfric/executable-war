@@ -76,12 +76,10 @@ public final class App {
             URISyntaxException,
             ClassNotFoundException,
             NoSuchMethodException,
-            IllegalAccessException,
-            IllegalArgumentException,
             InvocationTargetException,
             NoSuchAttributeException,
-            FileNotFoundException,
-            InvalidAttributeValueException {
+            InvalidAttributeValueException,
+            IllegalAccessException {
 
         myOwnFileName = getMyOwnFileName();
         myOwnManifest = getMyOwnManifestAttributes();
@@ -162,7 +160,7 @@ public final class App {
         return new File(((JarURLConnection) classFile.openConnection()).getJarFile().getName());
     }
 
-    private static Attributes getMyOwnManifestAttributes() throws IOException, MalformedURLException, URISyntaxException {
+    private static Attributes getMyOwnManifestAttributes() throws IOException, URISyntaxException {
         URL manifest = new URL("jar:file:" + myOwnFileName.getAbsolutePath() + "!/META-INF/MANIFEST.MF");
         final InputStream mfin = manifest.openStream();
         try {
@@ -205,8 +203,8 @@ public final class App {
         return tmpWinstoneJar;
     }
 
-    private static Method getWinstoneMainMethod(File tmpWinstoneJar)
-            throws SecurityException, NoSuchMethodException, ClassNotFoundException, MalformedURLException {
+    private static Method getWinstoneMainMethod(final File tmpWinstoneJar)
+            throws NoSuchMethodException, ClassNotFoundException, MalformedURLException {
 
         // Get the Winstone Main Class
         final ClassLoader winstoneJarClassLoader = new URLClassLoader(new URL[]{tmpWinstoneJar.toURI().toURL()});

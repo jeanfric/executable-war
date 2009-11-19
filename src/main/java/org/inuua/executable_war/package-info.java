@@ -25,7 +25,7 @@
  * now).
  *
  * <p>
- * The current implementation uses Winstone 
+ * The current implementation uses Winstone
  * <a href="http://winstone.sf.net/">http://winstone.sf.net</a>
  * as the servlet container.  It is of course possible to use a similar
  * scheme with Jetty or other servlet containers, but we believe Winstone,
