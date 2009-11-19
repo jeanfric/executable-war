@@ -1,0 +1,24 @@
+Executable War
+==============
+
+Taking ideas from Hudson and Google Gerrit, this project aims at providing
+a relatively easy way for developers to make WAR files self-runnable,
+while still deployable to a standard servlet container.
+
+To achieve this goal, we provide a sample Maven recipe that a developer
+can use, and a launcher class that will take care of making direct
+execution of the WAR possible.
+
+To find out more, please see the Javadoc pages for more information 
+on how to use.  You can also find out more about this project at
+http://jean-francois.richard.name/.
+
+
+References
+----------
+
+Kohsuke Kawaguchi's blog post on the topic:
+http://weblogs.java.net/blog/2007/02/11/hudson-became-self-executable
+
+Google Gerrit's implementation:
+http://android.git.kernel.org/?p=tools/executablewar.git
