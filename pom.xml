@@ -24,8 +24,8 @@ limitations under the License.
     <name>executable-war</name>
     <url>http://inuua.org/</url>
     <scm>
-        <connection>scm:git:git://github.com/jfrichard/executable-war.git</connection>
-        <url>scm:git:git://github.com/jfrichard/executable-war.git</url>
+        <connection>scm:git:https://github.com/jeanfric/executable-war.git</connection>
+        <url>scm:git:https://github.com/jeanfric/executable-war.git</url>
     </scm>
     <reporting>
         <plugins>
