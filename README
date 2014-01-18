@@ -1,4 +1,4 @@
-Executable War
+Executable WAR
 ==============
 
 Taking ideas from Hudson and Google Gerrit, this project aims at providing
@@ -9,14 +9,13 @@ To achieve this goal, we provide a sample Maven recipe that a developer
 can use, and a launcher class that will take care of making direct
 execution of the WAR possible.
 
-To find out more, please see the Javadoc pages.  You can also read about 
-this project at http://jean-francois.richard.name/.
+To find out more, please see the Javadoc pages.
 
 Sample Application Code
 -----------------------
 
 You can find a sample application that uses executable-war at 
-http://github.com/jfrichard/executable-war-sample-application.
+http://github.com/jeanfric/executable-war-sample-application.
 
 
 References
@@ -26,4 +25,4 @@ Kohsuke Kawaguchi's blog post on the topic:
 http://weblogs.java.net/blog/2007/02/11/hudson-became-self-executable
 
 Google Gerrit's implementation:
-http://android.git.kernel.org/?p=tools/executablewar.git
+https://gerrit.googlesource.com/executablewar/
