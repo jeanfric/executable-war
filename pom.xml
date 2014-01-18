@@ -58,15 +58,6 @@ limitations under the License.
             </plugin>
         </plugins>
     </build>
-    <developers>
-        <developer>
-            <name>Jean-Francois Richard</name>
-            <email>jf.richard@heimdalsgata.com</email>
-            <roles>
-                <role>Maintainer</role>
-            </roles>
-        </developer>
-    </developers>
 
     <!-- There's nothing after the licence, don't bother scrolling all the way down! :) -->
 
